@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="">
+
+    <div class="general-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Создать рекламную кампанию</h1>
+                    <hr>
+
+                    <form class="" action="" class="form form-inline text-center" method="post">{% csrf_token %}
+                        {{ form }}
+                        <a href="/get_token">получить токен</a>
+                        <hr>
+                        <input type="submit" value="Create" />
+                        <p>Результат:{{campagian_id}}</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}

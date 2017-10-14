@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="general-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="center">Сгенерировать токен</h1>
+                <br>
+                <div class="">
+                    <p>Введите API ID вашего приложения и перейдите по образовавщейся ссылке    </p>
+                    <form class="" action="" method="post">{% csrf_token %}
+                        {{ form }}
+                        <input type="submit" value="OK" autocomplete="on" />
+                        <br>
+                        <a href="https://oauth.vk.com/authorize?client_id={{api_id}}&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" target=_blank>https://oauth.vk.com/authorize?client_id={{api_id}}&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52</a>
+                    </form>
+                    <hr>
+                    <p>Токен — это Ваш ключ доступа. При выполнении определенных условий человек, получивший Ваш токен, может нанести существенный ущерб Вашим данным и данным других людей. Поэтому очень важно не передавать свой токен третьим лицам. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}

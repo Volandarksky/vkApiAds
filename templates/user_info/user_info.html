@@ -6,21 +6,16 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1 style="center">Получить id друзей именинников</h1>
+                <h1 style="center">Тест</h1>
+                <p>ввести id - получить имя</p>
                 <br>
                 <div class="">
-                    <a href="/get_token">Получить токен</a>
                     <form class="" action="" method="post">{% csrf_token %}
                         {{ form }}
                         <input type="submit" value="OK" />
                     </form>
                     <hr>
-                    <p>id друзей именинников: <button type="button" name="button">save</button> {{friends_id}}</p>
-                    <hr>
-                    <p>id именинников: {{users_id}}</p>
-                    <hr>
-                    <p>Result: {{result}}</p>
-
+                    <p>User: {{user_name}} {{user_lastName}}</p>
                 </div>
             </div>
         </div>

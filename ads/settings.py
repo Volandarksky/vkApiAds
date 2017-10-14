@@ -39,6 +39,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'friendsId',
+    'user_info',
+    'campagians',
+    'get_token',
 )
 
 MIDDLEWARE_CLASSES = (
